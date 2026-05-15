@@ -859,17 +859,3 @@ end)
 Section:NewButton("Syndicate hub", "Super cool but dont have mob support-", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ttoppl/syndicate/refs/heads/main/visual_loader.lua"))()
 end)
-local Tab = Window:NewTab("made by this loser lmao")
-local Section = Tab:NewSection("VERY RANDOM")
-Section:NewButton("Sev Z", "Gaming gui", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/dunno-arch/Sez/refs/heads/main/Idk"))();
-end)
-Section:NewButton("Second troublemaker gui", "this is about games and trolling kids lmao", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/second%20gui"))();
-end)
-Section:NewButton("Yoseph's hub", "Yeah my name is Yoseph wsp", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/Yoseph's%20hub"))();
-end)
-Section:NewButton("Fucking gay gui", "Im gay lets fuck", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/Fucking%20gay%20gui"))();
-end)
