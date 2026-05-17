@@ -229,7 +229,7 @@ Section:NewButton("Player orbit", "give your soul to someone you trusted", funct
     loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Orbit%20GUI"))()
 end)
 Section:NewButton("Underground stalker", "Who's still remember the ink monster script?", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/RvrJsRX9"))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ink-monster-but-better-gui-43583"))()
 end)
 Section:NewButton("Pet head", "WOO WE WANT IT!!! MOEW!!! COME AND GET IT BABY", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty40.lua"))()
