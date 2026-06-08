@@ -812,6 +812,391 @@ end)
 Section:NewButton("Orbit tool", "", function()
     loadstring(game:HttpGet("https://gist.githubusercontent.com/TreeByte403/a1c32afcac99fcf90cf24ac730a8b847/raw/545f934c38342fc4462a6bcd0d227abe10f88673/FeOrbitTool.lua"))()
 end)
+Section:NewButton("Gravity", "", function()
+    -- Gravity Controller GUI (WORKS EVERYWHERE + FULLY DRAGGABLE)
+-- No files needed, paste and execute
+
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+
+-- Create ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "GravityController"
+screenGui.ResetOnSpawn = false
+screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+screenGui.IgnoreGuiInset = true
+
+-- Use gethui() or coregui for executor compatibility
+local parent = gethui and gethui() or game:GetService("CoreGui")
+screenGui.Parent = parent
+
+-- Main Frame
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainFrame"
+mainFrame.Size = UDim2.new(0, 320, 0, 200)
+mainFrame.Position = UDim2.new(0.5, -160, 0.5, -100)
+mainFrame.BackgroundColor3 = Color3.fromRGB(40, 42, 54)
+mainFrame.BorderSizePixel = 0
+mainFrame.Active = true
+mainFrame.Parent = screenGui
+
+-- Add corner radius
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 16)
+corner.Parent = mainFrame
+
+-- Add drop shadow
+local shadow = Instance.new("Frame")
+shadow.Name = "Shadow"
+shadow.Size = UDim2.new(1, 8, 1, 8)
+shadow.Position = UDim2.new(0, -4, 0, -4)
+shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shadow.BackgroundTransparency = 0.6
+shadow.BorderSizePixel = 0
+shadow.ZIndex = 0
+shadow.Parent = mainFrame
+
+local shadowCorner = Instance.new("UICorner")
+shadowCorner.CornerRadius = UDim.new(0, 16)
+shadowCorner.Parent = shadow
+
+-- Title Label
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, -20, 0, 40)
+titleLabel.Position = UDim2.new(0, 10, 0, 10)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Text = "⚡ Gravity power"
+titleLabel.TextColor3 = Color3.fromRGB(180, 190, 210)
+titleLabel.TextSize = 22
+titleLabel.Font = Enum.Font.GothamBold
+titleLabel.TextXAlignment = Enum.TextXAlignment.Center
+titleLabel.Active = false
+titleLabel.Parent = mainFrame
+
+-- Toggle Button
+local toggleButton = Instance.new("TextButton")
+toggleButton.Size = UDim2.new(1, -40, 0, 50)
+toggleButton.Position = UDim2.new(0, 20, 0, 60)
+toggleButton.BackgroundColor3 = Color3.fromRGB(88, 101, 242)
+toggleButton.Text = "ON"
+toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleButton.TextSize = 24
+toggleButton.Font = Enum.Font.GothamBold
+toggleButton.BorderSizePixel = 0
+toggleButton.AutoButtonColor = false
+toggleButton.Parent = mainFrame
+
+local toggleCorner = Instance.new("UICorner")
+toggleCorner.CornerRadius = UDim.new(0, 25)
+toggleCorner.Parent = toggleButton
+
+-- Speed Label
+local speedLabel = Instance.new("TextLabel")
+speedLabel.Size = UDim2.new(1, 0, 0, 30)
+speedLabel.Position = UDim2.new(0, 0, 0, 120)
+speedLabel.BackgroundTransparency = 1
+speedLabel.Text = "Speed: 5"
+speedLabel.TextColor3 = Color3.fromRGB(180, 190, 210)
+speedLabel.TextSize = 18
+speedLabel.Font = Enum.Font.Gotham
+speedLabel.TextXAlignment = Enum.TextXAlignment.Center
+speedLabel.Active = false
+speedLabel.Parent = mainFrame
+
+-- Minus Button
+local minusButton = Instance.new("TextButton")
+minusButton.Size = UDim2.new(0, 60, 0, 50)
+minusButton.Position = UDim2.new(0, 20, 1, -65)
+minusButton.BackgroundColor3 = Color3.fromRGB(55, 57, 70)
+minusButton.Text = "-"
+minusButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+minusButton.TextSize = 32
+minusButton.Font = Enum.Font.GothamBold
+minusButton.BorderSizePixel = 0
+minusButton.AutoButtonColor = false
+minusButton.Parent = mainFrame
+
+local minusCorner = Instance.new("UICorner")
+minusCorner.CornerRadius = UDim.new(0, 12)
+minusCorner.Parent = minusButton
+
+-- Plus Button
+local plusButton = Instance.new("TextButton")
+plusButton.Size = UDim2.new(0, 60, 0, 50)
+plusButton.Position = UDim2.new(1, -80, 1, -65)
+plusButton.BackgroundColor3 = Color3.fromRGB(55, 57, 70)
+plusButton.Text = "+"
+plusButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+plusButton.TextSize = 32
+plusButton.Font = Enum.Font.GothamBold
+plusButton.BorderSizePixel = 0
+plusButton.AutoButtonColor = false
+plusButton.Parent = mainFrame
+
+local plusCorner = Instance.new("UICorner")
+plusCorner.CornerRadius = UDim.new(0, 12)
+plusCorner.Parent = plusButton
+
+-- Variables
+local gravityEnabled = true
+local gravitySpeed = 5
+local dragging = false
+local dragInput
+local dragStart
+local startPos
+
+-- Store all player characters to exclude them
+local playerCharacters = {}
+
+-- Function to update player character list
+local function updatePlayerCharacters()
+    playerCharacters = {}
+    for _, player in pairs(Players:GetPlayers()) do
+        if player.Character then
+            playerCharacters[player.Character] = true
+            -- Also store character descendants to be extra safe
+            for _, descendant in pairs(player.Character:GetDescendants()) do
+                if descendant:IsA("BasePart") then
+                    playerCharacters[descendant] = true
+                end
+            end
+        end
+    end
+end
+
+-- Function to check if part belongs to a player character
+local function isPlayerCharacterPart(part)
+    -- Direct check
+    if playerCharacters[part] then
+        return true
+    end
+    
+    -- Check if part is descendant of any player character
+    local ancestor = part
+    while ancestor and ancestor ~= workspace do
+        if playerCharacters[ancestor] then
+            return true
+        end
+        -- Extra check for Humanoid in parent tree
+        if ancestor:FindFirstChildOfClass("Humanoid") then
+            -- Check if this humanoid belongs to a player
+            for _, player in pairs(Players:GetPlayers()) do
+                if player.Character == ancestor then
+                    return true
+                end
+            end
+        end
+        ancestor = ancestor.Parent
+    end
+    
+    return false
+end
+
+-- Function to apply gravity to ALL unanchored parts ANYWHERE in workspace
+local function applyGravity()
+    if not gravityEnabled then return end
+    
+    -- Update player list frequently to catch respawns
+    updatePlayerCharacters()
+    
+    -- Process ALL descendants in workspace (NO distance limit)
+    for _, part in pairs(workspace:GetDescendants()) do
+        if part:IsA("BasePart") and not part.Anchored then
+            
+            -- SKIP ONLY if it's a player part
+            if not isPlayerCharacterPart(part) then
+                local bodyVelocity = part:FindFirstChild("CustomGravity")
+                
+                if not bodyVelocity then
+                    bodyVelocity = Instance.new("BodyVelocity")
+                    bodyVelocity.Name = "CustomGravity"
+                    bodyVelocity.MaxForce = Vector3.new(0, math.huge, 0)
+                    bodyVelocity.P = 1250
+                    bodyVelocity.Parent = part
+                end
+                
+                -- Apply constant upward velocity (works at ANY distance)
+                local targetVelocity = gravitySpeed * 10
+                bodyVelocity.Velocity = Vector3.new(0, targetVelocity, 0)
+            else
+                -- Remove gravity from player parts immediately
+                local bodyVelocity = part:FindFirstChild("CustomGravity")
+                if bodyVelocity then
+                    bodyVelocity:Destroy()
+                end
+            end
+        end
+    end
+end
+
+-- Function to remove all gravity effects
+local function removeGravityEffects()
+    for _, part in pairs(workspace:GetDescendants()) do
+        if part:IsA("BasePart") then
+            local bodyVelocity = part:FindFirstChild("CustomGravity")
+            if bodyVelocity then
+                bodyVelocity:Destroy()
+            end
+        end
+    end
+end
+
+-- Update speed display
+local function updateSpeed()
+    speedLabel.Text = "Speed: " .. gravitySpeed
+end
+
+-- Update drag position
+local function update(input)
+    local delta = input.Position - dragStart
+    mainFrame.Position = UDim2.new(
+        startPos.X.Scale,
+        startPos.X.Offset + delta.X,
+        startPos.Y.Scale,
+        startPos.Y.Offset + delta.Y
+    )
+end
+
+-- DRAGGING - Method 1: From main frame
+mainFrame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainFrame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+mainFrame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
+
+-- Toggle button click
+toggleButton.MouseButton1Click:Connect(function()
+    gravityEnabled = not gravityEnabled
+    
+    if gravityEnabled then
+        toggleButton.Text = "ON"
+        TweenService:Create(toggleButton, TweenInfo.new(0.3), {
+            BackgroundColor3 = Color3.fromRGB(88, 101, 242)
+        }):Play()
+    else
+        toggleButton.Text = "OFF"
+        TweenService:Create(toggleButton, TweenInfo.new(0.3), {
+            BackgroundColor3 = Color3.fromRGB(220, 80, 80)
+        }):Play()
+        
+        removeGravityEffects()
+    end
+end)
+
+-- Minus button
+minusButton.MouseButton1Click:Connect(function()
+    if gravitySpeed > 1 then
+        gravitySpeed = gravitySpeed - 1
+        updateSpeed()
+        
+        TweenService:Create(minusButton, TweenInfo.new(0.1), {
+            BackgroundColor3 = Color3.fromRGB(45, 47, 60)
+        }):Play()
+        task.wait(0.1)
+        TweenService:Create(minusButton, TweenInfo.new(0.1), {
+            BackgroundColor3 = Color3.fromRGB(55, 57, 70)
+        }):Play()
+    end
+end)
+
+-- Plus button
+plusButton.MouseButton1Click:Connect(function()
+    if gravitySpeed < 20 then
+        gravitySpeed = gravitySpeed + 1
+        updateSpeed()
+        
+        TweenService:Create(plusButton, TweenInfo.new(0.1), {
+            BackgroundColor3 = Color3.fromRGB(45, 47, 60)
+        }):Play()
+        task.wait(0.1)
+        TweenService:Create(plusButton, TweenInfo.new(0.1), {
+            BackgroundColor3 = Color3.fromRGB(55, 57, 70)
+        }):Play()
+    end
+end)
+
+-- Hover effects
+local function addHoverEffect(button, normalColor, hoverColor)
+    button.MouseEnter:Connect(function()
+        if not dragging then
+            TweenService:Create(button, TweenInfo.new(0.2), {BackgroundColor3 = hoverColor}):Play()
+        end
+    end)
+    
+    button.MouseLeave:Connect(function()
+        TweenService:Create(button, TweenInfo.new(0.2), {BackgroundColor3 = normalColor}):Play()
+    end)
+end
+
+addHoverEffect(minusButton, Color3.fromRGB(55, 57, 70), Color3.fromRGB(65, 67, 80))
+addHoverEffect(plusButton, Color3.fromRGB(55, 57, 70), Color3.fromRGB(65, 67, 80))
+
+-- Update character list when players join/leave/respawn
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(char)
+        task.wait(0.1) -- Small delay to ensure character fully loads
+        updatePlayerCharacters()
+    end)
+end)
+
+Players.PlayerRemoving:Connect(function()
+    updatePlayerCharacters()
+end)
+
+for _, player in pairs(Players:GetPlayers()) do
+    if player.Character then
+        updatePlayerCharacters()
+    end
+    player.CharacterAdded:Connect(function(char)
+        task.wait(0.1)
+        updatePlayerCharacters()
+    end)
+end
+
+-- Initialize player characters
+updatePlayerCharacters()
+
+-- Main loop - CONSTANTLY updates ALL parts in workspace
+local connection
+connection = RunService.Heartbeat:Connect(function()
+    applyGravity()
+end)
+
+-- Cleanup on GUI destroy
+screenGui.Destroying:Connect(function()
+    if connection then
+        connection:Disconnect()
+    end
+    removeGravityEffects()
+end)
+
+print("✓ Gravity Controller loaded!")
+print("✓ GUI is DRAGGABLE - Click and drag anywhere on the GUI!")
+print("✓ Works on ALL unanchored parts EVERYWHERE in the map!")
+print("✓ 100% PLAYER-SAFE - NO players will be affected!")
+end)
 Section:NewButton("Axios hub", "", function()
     loadstring(game:HttpGet('https://axioshub.store/loaderapi'))()
 end)
