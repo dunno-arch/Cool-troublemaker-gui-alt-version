@@ -1,4 +1,3 @@
-
 local SoundService = game:GetService("SoundService")
 
 local sound = Instance.new("Sound")
@@ -11,54 +10,24 @@ sound:Play()
 ---custom sound when execute lmao
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
 local Window = Rayfield:CreateWindow({
-    Name = "Yosheph's Hub",
-    LoadingTitle = "Yosheph's Hub",
-    LoadingSubtitle = "Black & Red Edition",
+   Name = "Yosheph's hub",
+   Icon = "home",
+   LoadingTitle = "Yosheph's collection",
+   LoadingSubtitle = "by 007n70 (the_secondblueman)",
+   ShowText = "7n70",
+   Theme = "Amethyst",
 
-    ConfigurationSaving = {
-        Enabled = false
-    },
+   ToggleUIKeybind = "K",
 
-    Theme = {
-        TextColor = Color3.fromRGB(255,255,255),
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
 
-        Background = Color3.fromRGB(0,0,0),
-        Topbar = Color3.fromRGB(25,0,0),
-        Shadow = Color3.fromRGB(0,0,0),
-
-        TabBackground = Color3.fromRGB(12,12,12),
-        TabStroke = Color3.fromRGB(140,0,0),
-        TabBackgroundSelected = Color3.fromRGB(55,0,0),
-        TabTextColor = Color3.fromRGB(210,210,210),
-        SelectedTabTextColor = Color3.fromRGB(255,255,255),
-
-        ElementBackground = Color3.fromRGB(18,0,0),
-        ElementBackgroundHover = Color3.fromRGB(60,0,0),
-        SecondaryElementBackground = Color3.fromRGB(28,0,0),
-
-        ElementStroke = Color3.fromRGB(130,0,0),
-        SecondaryElementStroke = Color3.fromRGB(170,0,0),
-
-        SliderBackground = Color3.fromRGB(45,0,0),
-        SliderProgress = Color3.fromRGB(255,0,0),
-
-        ToggleBackground = Color3.fromRGB(35,0,0),
-        ToggleEnabled = Color3.fromRGB(255,0,0),
-        ToggleDisabled = Color3.fromRGB(70,0,0),
-
-        DropdownSelected = Color3.fromRGB(60,0,0),
-        DropdownUnselected = Color3.fromRGB(20,0,0),
-
-        InputBackground = Color3.fromRGB(18,0,0),
-        InputStroke = Color3.fromRGB(140,0,0),
-        PlaceholderColor = Color3.fromRGB(160,160,160),
-
-        NotificationBackground = Color3.fromRGB(20,0,0),
-        NotificationActionsBackground = Color3.fromRGB(40,0,0)
-    }
-})
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Y00Sevz Hub"
+   },
 
    Discord = {
       Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
@@ -661,7 +630,7 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Forsaken", "beef")
+local Tab = Window:CreateTab("Forsaken", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Walkspeed over and void rush auto control",
    Callback = function()
@@ -887,7 +856,7 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Piggy", "piggy-bank")
+local Tab = Window:CreateTab("Piggy", 4483362458)
 local Button = Tab:CreateButton({
    Name = "UNKNOW hub [key: ALUKSX]",
    Callback = function()
@@ -943,76 +912,7 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Thirsty vampire", "sword")
-local Button = Tab:CreateButton({
-   Name = "Button pads v0.1",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/tester999scripts/Mobile-Roblox-scripts/refs/heads/main/T.V.%20script%20mobile.lua"))()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Auto farm",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/LuvisNOTreal/Scripts/refs/heads/main/thirstyvampireautofarm.lua"))()
-   end,
-})local Button = Tab:CreateButton({
-   Name = "Kill aura",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Thirsty-Vampire-kill-aura-70577"))();
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Touch of death",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Thirsty-Vampire-Touch-of-death-22023"))()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Veno hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/totallynothimplayz/Jd/refs/heads/main/Veno%20Hub", true))()
-   end,
-})
-local Tab = Window:CreateTab("Zomebie lab", "bone")
-local Button = Tab:CreateButton({
-   Name = "Loop kill all zom",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Zombie-lab-Equal-Avatar-Scale-loop-kill-all-zombies-script-75935"))()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "OP gun",
-   Callback = function()
-   loadstring(game:HttpGet("hhttps://rawscripts.net/raw/Zombie-lab-Hotfix-OP-Gun-mod-45487"))()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Zmod",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Zombie-lab-ZMod-Update-Teleport-Menu-6203"))()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "ZLfucker",
-   Callback = function()
-   loadstring(request({
-    Url = "https://raw.githubusercontent.com/osukfcdays/zlfucker/refs/heads/main/.luau"
-}).Body)()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Byte hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/screengui/bytehub/refs/heads/main/loader.lua",true))()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Gui 1",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/zlab", true))()
-   end,
-})
-local Tab = Window:CreateTab("System", "settings")
+local Tab = Window:CreateTab("System", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
    Callback = function()
