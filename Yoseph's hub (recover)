@@ -1,0 +1,1075 @@
+
+local SoundService = game:GetService("SoundService")
+
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://132234673148955"
+sound.Volume = 2
+sound.PlayOnRemove = false
+sound.Parent = SoundService
+
+sound:Play()
+---custom sound when execute lmao
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Yosheph's Hub",
+    LoadingTitle = "Yosheph's Hub",
+    LoadingSubtitle = "Black & Red Edition",
+
+    ConfigurationSaving = {
+        Enabled = false
+    },
+
+    Theme = {
+        TextColor = Color3.fromRGB(255,255,255),
+
+        Background = Color3.fromRGB(0,0,0),
+        Topbar = Color3.fromRGB(25,0,0),
+        Shadow = Color3.fromRGB(0,0,0),
+
+        TabBackground = Color3.fromRGB(12,12,12),
+        TabStroke = Color3.fromRGB(140,0,0),
+        TabBackgroundSelected = Color3.fromRGB(55,0,0),
+        TabTextColor = Color3.fromRGB(210,210,210),
+        SelectedTabTextColor = Color3.fromRGB(255,255,255),
+
+        ElementBackground = Color3.fromRGB(18,0,0),
+        ElementBackgroundHover = Color3.fromRGB(60,0,0),
+        SecondaryElementBackground = Color3.fromRGB(28,0,0),
+
+        ElementStroke = Color3.fromRGB(130,0,0),
+        SecondaryElementStroke = Color3.fromRGB(170,0,0),
+
+        SliderBackground = Color3.fromRGB(45,0,0),
+        SliderProgress = Color3.fromRGB(255,0,0),
+
+        ToggleBackground = Color3.fromRGB(35,0,0),
+        ToggleEnabled = Color3.fromRGB(255,0,0),
+        ToggleDisabled = Color3.fromRGB(70,0,0),
+
+        DropdownSelected = Color3.fromRGB(60,0,0),
+        DropdownUnselected = Color3.fromRGB(20,0,0),
+
+        InputBackground = Color3.fromRGB(18,0,0),
+        InputStroke = Color3.fromRGB(140,0,0),
+        PlaceholderColor = Color3.fromRGB(160,160,160),
+
+        NotificationBackground = Color3.fromRGB(20,0,0),
+        NotificationActionsBackground = Color3.fromRGB(40,0,0)
+    }
+})
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("Blox hunt", "eye-off")
+local Button = Tab:CreateButton({
+   Name = "Gui 1",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Hospital-Map!-or-Blox-Hunt-v3.2.0-ESP-and-Safe-Spot-37442"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Gui 2",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/wJw57ccR"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Gui 3",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/izEaLFUi"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Pro bacon hub v2",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ProBaconHub/ProBaconHubV2/refs/heads/main/LOADER.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "hub 1",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TheScripterRbx3000/Blox-Hunt/main/Gui%20/Main%20/OP/2023"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Player hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubLoader.lua",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto token",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/kodescripts/scripts/main/BloxHunt.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hider esp",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/DylanIsAKingL/Lua-Scripts/main/Block-Hunt-Esp.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Free gamepasses",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/LynXzl/Scripts/main/Blox%20Hunt/Script.lua"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Sword fight", "swords")
+local Button = Tab:CreateButton({
+   Name = "Reacher",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Mobile-Sword-Fight-Killaura-44174"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Space hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/loader.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto collect sword",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Sword-Fights-on-the-Heights-IV-Sword-Fights-On-The-Heights-42404"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto sword fight",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/johnporkie667/idkm8whatidk/refs/heads/main/main"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto farm",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Any-sword-fight-game-script-adjustable-and-for-learning-37774"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Kill all",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/noritery/msf-killall/refs/heads/main/main.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Bot [Keybind : X]",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
+   end,
+})
+
+local Tab = Window:CreateTab("UBG", "hand")
+local Button = Tab:CreateButton({
+   Name = "Mirage hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e84aac149960efeddc83453e4a856d9d.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Pathos hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/th3-osc/Pathos/main/Pathos%20Key%20System.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Beanz hub [key: deffendersboxing]",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastefy.app/KtsF3Wq7/raw'))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Siff hub [Key tut: you must join their discord server and verify ur own key!]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/NysaDanielle/loader/refs/heads/main/auth"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "XVC hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Max hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e115b107e044a8cfc35b87ce573d558f.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto redeem codes",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/SUPERNOVA-untitled-boxing-game-Auto-Redeem-Codes-79233"))()
+   end,
+})
+local Tab = Window:CreateTab("Right 2 fight", "flame")
+local Button = Tab:CreateButton({
+   Name = "Dragon of mark gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-of-mark-49598"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Inf heat",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/KadenWare/R2F-SCRIPTS/main/INFINITE%20HEAT"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Parker morph",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Parker-morph-mod-22674"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dragon morph",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-style-morph-mod-21063"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Akiyama morph",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Crepscule/R2F-MODDED-STYLES/refs/heads/main/AkiyamaMorph.lua"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dragon character voice",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-voice-mod-21064"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Legacy tiger style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/TigerLegacyStyleV2"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Tiger with brute edition style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Tiger-style-Replaces-brute-not-fisticuffs-21014"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Boxer style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Boxer-Style-41626"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dragon of steel and legendary style (Keybind: L)",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-Of-Steel-41612"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Legendary dragon style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-Style-7061"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Black koi style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Aizawa-style-40762"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Komainu style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Shishido-style-40025"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Ghost style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-ghost-39490"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Tanimura style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Tanimura-Style-33365"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dragon of tosa style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/DragonofTosaStyle"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Footwork style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/FootworkerStyle"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Yazua styles",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Yazua-styles-29493"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Reverse style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Revsre-style-29492"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Mixed style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Mixed-style-70198"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Legend style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Legend-Style-33366"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Nagaraja style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-narijaj-29485"))()
+   end,
+})local Button = Tab:CreateButton({
+   Name = "Bluster style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-b*er-style-29487"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Kiryu's style modded",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Yakuza-0-to-gaiden-styles-28250"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Crane style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/CraneStyle"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Acalas wrath style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Acalas-wrath-style-25865"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Officer style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/OfficerStyle"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Tiger saejima style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/SaejimaTigerStyle"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dragon of dojima original style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-Of-Dojima-22634"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dragon of dojima renix style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-The-Dragon-of-Dojima-Version-23288"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dragon of dojima funny edition style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-Of-Dojima-But-Funny-Edition-22678"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Combat god style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Combat-god-style-22769"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Noob x pot style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Noob-x-pot-style-22671"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Wizard style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/reversevisible/r2fmodding/main/shuckystyle.lua"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Karate style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Karate-Style-22512"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Street style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Street-ing-style-22468"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Parker style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Parker-style-20800"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Vulcan style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Vulcan-Villian-style-70207"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Daigo dojima style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Daigo-dojima-moveset-style-58951"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Devil style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/CollinMiller123/demonlitemode1.2/main/demonlitemode1.2"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Derek style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Derek-Style-8102"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Leopard style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Leopard-Style-8101"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Blade style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Blade-Style-REUPLOADED-8006"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Egor style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-egor-Style-55436"))()
+   end,
+})
+local Tab = Window:CreateTab("Meepcity", "home")
+local Button = Tab:CreateButton({
+   Name = "rolezeay hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/rolezeay/meepcityhmm/refs/heads/main/hmmmm"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Synolope gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/synolope/mpcity/main/loader.lua",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Synolope 2 gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/rolezeay/synoloperevival/refs/heads/main/hmmmmm"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Rifile gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/rolezeay/rifle-animations/refs/heads/main/hmmmm"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Invade backyard",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/7R4TVCNu"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Meephub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/2G3vuyFT"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Chess club", "lightbulb")
+local Button = Tab:CreateButton({
+   Name = "Chess ai",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SchizoCore/chessBot/refs/heads/main/main.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto chess/best move",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Chess-Club-Best-move-and-auto-move-41131"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Chess club gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/riglette/GUMANAKANAPLSLNG/refs/heads/main/MaawaKaPls"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Break in", "venetian-mask")
+local Button = Tab:CreateButton({
+   Name = "Proxima hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Crusty hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/platinww/CrustyMain/refs/heads/main/break-in-story/breakinstory.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "X hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/HubLoader.lua", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Open source",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Break-In-(Story)-Open-Source-3527"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Levi4chan hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Levi4Chan/Rblx-Scripts/main/Break-In.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "DP hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/COOLXPLO/DP-HUB-coolxplo/refs/heads/main/BreakInStory.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Spectravax hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/deedlemcdoodledeedlemcdoodle-creator/SpectravaxHub/refs/heads/main/newestkeylessscript.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "XVC hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Break in 2", "drama")
+local Button = Tab:CreateButton({
+   Name = "LKF hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/4H5Vb2in/raw"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Actual hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Iptxt/ActualHub/refs/heads/main/Loader"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Blayze hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/OfficialBlayze/BreakIn2Script/refs/heads/main/Blayze/Hub/V1.lua", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hutao hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Break-In-2-(Story)-Hutao-Hub-reak-In-2-56988"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Harlen hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastee.dev/r/pr5mH9tc"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "FH hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/Hide/main/Break%20in%202"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "PlayerZN hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/PlayerZN-Gaming/PlayerVN-Hub-Lua/refs/heads/main/PlayerVN-Hub-BreakIn2--AdminMenu'))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "KRT hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/0Olk15yd/raw"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "BI2",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Iceware-RBLX/Roblox/refs/heads/main/loader.lua",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "BI hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://freenote.biz/raw/80jXm2Q0a7",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "XVC hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Forsaken", "beef")
+local Button = Tab:CreateButton({
+   Name = "Walkspeed over and void rush auto control",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/XQZ-official/XQZscripts/refs/heads/main/VroomVroom.txt"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Noli's anti slip",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/NOLI-Forsaken-Noli-Void-Rush-Anti-Slippery-48647"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "More noli's void rush control lol",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/noli-void-rush-control/refs/heads/main/scripr"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "The son skin [shed]",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/7QA57erM"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Artful skin [shed]",
+   Callback = function()
+   loadstring(game:HttpGet('https://gist.githubusercontent.com/totallynotflowers/8fe71c3be3ee2e080cf51fd982e12c17/raw/74f0c7daca90189b7e6f722fa52874bc93a41a9c/gistfile1.txt'))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change guest's animation",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/yLywOuKd/raw", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Chance's aimbot",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Chance-aimbot/refs/heads/main/Chance%20aimbot%20v2"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Guest's auto block",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Auto-block-script/refs/heads/main/FINAL%20AUTO%20BLOCK"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Twotime's auto backstab",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Auto-backstab-two-time/refs/heads/main/Auto%20backstab%20v2"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dueskhar's protect sheild pass wall",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Dusekkar-protection-goes-thru-walls-51812"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fat John's auto error 404",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/John-doe-auto-parry-404/refs/heads/main/Script"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Slasher's auto raging",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Auto-raging-pace/refs/heads/main/Da%20scripr"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Silly fuck animations",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/lexioi/EmotesForsaken/refs/heads/main/Script"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Inf stamina [for losers who's doesn't know how to stamina manage lmao]",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Inf-stamina-universal-For-forsaken-and-forsaken-game-clone-54983"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Frontflip [a copied version lol]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SHRTRYScriptMANhere/stolenahhfrotflip/refs/heads/main/Flip",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Device stuff idk",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Universal-Forsaken-Device-Spoofer-53644"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Nyansaken [key: NYAN] [patching rn might rework soon]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/NyansakenHub/NyansakenHub/refs/heads/main/forsakenupdate"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fartsaken",
+   Callback = function()
+   loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua")))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "B0bby hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/BobJunior1/ForsakenBoi/refs/heads/main/B0bbyHub"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "SNT hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Snowt69/SNT-HUB/refs/heads/main/Forsaken"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "ZscriptX hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc6607930f2b0b3d792cb7486ddc8137.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Sigmasaken hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaboy-sigma-boy/Sigmasaken/refs/heads/main/sigmasakenmain"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Rif hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Aether hub",
+   Callback = function()
+   script_key = "Add key here to auto verify"
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "A hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/hub/refs/heads/main/hub"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Funny hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/PlutomasterAccount/Funny-Hub-V2-Forsaken/main/Funny%20Hub%20V2%20Forsaken.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fever hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/vinqDevelops/erwwefqweqewqwe/refs/heads/main/lol.txt'))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Frostware hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Snowie3310/Frostware/main/Forsaken.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Moonlight hub",
+   Callback = function()
+   shared.key = "";
+loadstring(game:HttpGet("https://api.moonlight.uno/cdn/loader"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Voidware",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Slasher-Forsaken-Forsaken-voidware-keyless-OP11i111i1i1ii1i1i1-53150"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Kanl hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%87.txt"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Kryorion hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ehrerlikesteto/KryOnionrep/refs/heads/main/OnionIsForsaken"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "DY hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/upuGGVpP/raw"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "RBBHS hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "RX gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Redexe19/RXGUIV1/refs/heads/main/RX%20Forsaken/RX_Forsakened"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "MX gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Forsaken/refs/heads/main/A1"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hitbox expander gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/nL596gUR"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Piggy", "piggy-bank")
+local Button = Tab:CreateButton({
+   Name = "UNKNOW hub [key: ALUKSX]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Veno hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/totallynothimplayz/Jd/refs/heads/main/Veno%20Hub", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Galactic hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticScripts/Galactic-Hub/refs/heads/main/WindUI"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Tiger x hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/BalintTheDevXBack/Games/refs/heads/main/Piggy"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Starhack hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/StarHackScripts/StarHack-Hub-Deepstar-Hub/refs/heads/main/StarHackHub_PiggyV2release"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Plushie collector",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/AcelestuZ/PiggyPlushieCollector/main/script.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Godmode and esp",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Iliankytb/Iliankytb/main/CheatPiggy"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Godmode and esp [fixed version]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptBloxUniversal/piggy-roblox/refs/heads/main/Piggy.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Admin cmds V13",
+   Callback = function()
+      loadstring(game:HttpGet("https://abre.ai/piggy-h9izextp"))();
+   end,
+})
+
+local Tab = Window:CreateTab("Thirsty vampire", "sword")
+local Button = Tab:CreateButton({
+   Name = "Button pads v0.1",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/tester999scripts/Mobile-Roblox-scripts/refs/heads/main/T.V.%20script%20mobile.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto farm",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/LuvisNOTreal/Scripts/refs/heads/main/thirstyvampireautofarm.lua"))()
+   end,
+})local Button = Tab:CreateButton({
+   Name = "Kill aura",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Thirsty-Vampire-kill-aura-70577"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Touch of death",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Thirsty-Vampire-Touch-of-death-22023"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Veno hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/totallynothimplayz/Jd/refs/heads/main/Veno%20Hub", true))()
+   end,
+})
+local Tab = Window:CreateTab("Zomebie lab", "bone")
+local Button = Tab:CreateButton({
+   Name = "Loop kill all zom",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Zombie-lab-Equal-Avatar-Scale-loop-kill-all-zombies-script-75935"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "OP gun",
+   Callback = function()
+   loadstring(game:HttpGet("hhttps://rawscripts.net/raw/Zombie-lab-Hotfix-OP-Gun-mod-45487"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Zmod",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Zombie-lab-ZMod-Update-Teleport-Menu-6203"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "ZLfucker",
+   Callback = function()
+   loadstring(request({
+    Url = "https://raw.githubusercontent.com/osukfcdays/zlfucker/refs/heads/main/.luau"
+}).Body)()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Byte hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/screengui/bytehub/refs/heads/main/loader.lua",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Gui 1",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/zlab", true))()
+   end,
+})
+local Tab = Window:CreateTab("System", "settings")
+local Button = Tab:CreateButton({
+   Name = "Destroy the ui",
+   Callback = function()
+   Rayfield:Destroy()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Default]",
+   Callback = function()
+   Window.ModifyTheme("Default")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Amber glow]",
+   Callback = function()
+   Window.ModifyTheme("AmberGlow")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Amethyst]",
+   Callback = function()
+   Window.ModifyTheme("Amethyst")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Bloom]",
+   Callback = function()
+   Window.ModifyTheme("Bloom")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [DarkBlue]",
+   Callback = function()
+   Window.ModifyTheme("DarkBlue")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Green]",
+   Callback = function()
+   Window.ModifyTheme("Green")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Light]",
+   Callback = function()
+   Window.ModifyTheme("Light")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Ocean]",
+   Callback = function()
+   Window.ModifyTheme("Ocean")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Serenity]",
+   Callback = function()
+   Window.ModifyTheme("Serenity")
+   end,
+})
