@@ -1256,5 +1256,5 @@ end)
 local Tab = Window:NewTab("My other hub/gui")
 local Section = Tab:NewSection("yes")
 Section:NewButton("Yoseph's hub", "It just got recover", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/thatonestupidkid1/COOLKID-WARE/main/obfuscation"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/dunno-arch/Cool-troublemaker-gui-alt-version/refs/heads/main/Yoseph's%20hub%20(recover)"))();
 end)
