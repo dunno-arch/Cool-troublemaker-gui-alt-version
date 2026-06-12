@@ -979,6 +979,37 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/memephonephone/MEFTF/refs/heads/main/FTFexploits.txt"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Ftfhax v0.4.0",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/0e449511c18149f463817b9b476b11e7ca24435f88e8f0dda1198a1d89d72cb7/download"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "KamScripts",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/lakamkam5-lab/fleethefac/refs/heads/main/flee%20the%20fac.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "SourceOnce",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/sYi1VzWM"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Extended",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/0b7d24699a34c149a75494445c466d7bfc6bca7f07dd78822cf1342abd3232df/download"))()
+   end,
+})
+local Tab = Window:CreateTab("MM2", "slice")
+local Button = Tab:CreateButton({
+   Name = "Waguri",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Waguriiiii/Murder-mystery-2/refs/heads/main/Waguri.lua"))()
+   end,
+})
 local Tab = Window:CreateTab("System", "settings")
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
