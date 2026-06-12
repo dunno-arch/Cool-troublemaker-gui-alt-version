@@ -660,7 +660,7 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Forsaken", 4483362458)
+local Tab = Window:CreateTab("Forsaken", "beef")
 local Button = Tab:CreateButton({
    Name = "Walkspeed over and void rush auto control",
    Callback = function()
@@ -886,7 +886,7 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Piggy", 4483362458)
+local Tab = Window:CreateTab("Piggy", "piggy-bank")
 local Button = Tab:CreateButton({
    Name = "UNKNOW hub [key: ALUKSX]",
    Callback = function()
@@ -970,6 +970,13 @@ local Button = Tab:CreateButton({
    Name = "Veno hub",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/totallynothimplayz/Jd/refs/heads/main/Veno%20Hub", true))()
+   end,
+})
+local Tab = Window:CreateTab("Flee the facility", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "Ftf v2.0",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/memephonephone/MEFTF/refs/heads/main/FTFexploits.txt"))()
    end,
 })
 local Tab = Window:CreateTab("System", 4483362458)
