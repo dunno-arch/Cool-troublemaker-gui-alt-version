@@ -972,14 +972,14 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/totallynothimplayz/Jd/refs/heads/main/Veno%20Hub", true))()
    end,
 })
-local Tab = Window:CreateTab("Flee the facility", 4483362458)
+local Tab = Window:CreateTab("Flee the facility", "gavel")
 local Button = Tab:CreateButton({
    Name = "Ftf v2.0",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/memephonephone/MEFTF/refs/heads/main/FTFexploits.txt"))()
    end,
 })
-local Tab = Window:CreateTab("System", 4483362458)
+local Tab = Window:CreateTab("System", "settings")
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
    Callback = function()
