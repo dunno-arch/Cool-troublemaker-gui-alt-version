@@ -1003,21 +1003,35 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/0b7d24699a34c149a75494445c466d7bfc6bca7f07dd78822cf1342abd3232df/download"))()
    end,
 })
-local Button = Tab:CreateButton({
-   Name = "99 hub",
-   Callback = function()
-   getgenv().Settings = {
-    UiLibrary = "Fluent"
-}
- 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Ewerton99BRYT99/MyScripts/refs/heads/main/FleeTheFacility5.2"))()
-   end,
-})
 local Tab = Window:CreateTab("MM2", "slice")
 local Button = Tab:CreateButton({
    Name = "Waguri",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Waguriiiii/Murder-mystery-2/refs/heads/main/Waguri.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Foxname",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ZenosScript/Mm2Autofarm/refs/heads/main/Valentines"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "X hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://github.com/DiasMm2Script/murder-Mystery-2/raw/refs/heads/main/murder%20Mystery%202"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Yukio hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/universal-roblox/Mm2/refs/heads/main/Murder-Mystery-2.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Onyx hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://github.com/DiasMm2Script/murder-Mystery-2/raw/refs/heads/main/murder%20Mystery%202"))()
    end,
 })
 local Tab = Window:CreateTab("System", "settings")
