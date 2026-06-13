@@ -1003,6 +1003,16 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/0b7d24699a34c149a75494445c466d7bfc6bca7f07dd78822cf1342abd3232df/download"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "99 hub",
+   Callback = function()
+   getgenv().Settings = {
+    UiLibrary = "Fluent"
+}
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ewerton99BRYT99/MyScripts/refs/heads/main/FleeTheFacility5.2"))()
+   end,
+})
 local Tab = Window:CreateTab("MM2", "slice")
 local Button = Tab:CreateButton({
    Name = "Waguri",
